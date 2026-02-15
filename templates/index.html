@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World App</title>
+    <style>
+        :root {
+            --bg-color: #e0f7fa; /* 明るい水色 */
+            --text-color: #006064; /* 濃い水色（読みやすさ重視） */
+            --font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s ease;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        h1 {
+            font-size: 5rem; /* 大きな文字 */
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -2px;
+            animation: fadeIn 1.2s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World</h1>
+    </div>
+</body>
+</html>
