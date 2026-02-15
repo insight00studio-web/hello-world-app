@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World App</title>
     <style>
         :root {
-            --bg-color: #e0f7fa; /* 明るい水色 */
-            --text-color: #006064; /* 濃い水色（読みやすさ重視） */
+            --bg-color: #e0f7fa;
+            /* 明るい水色 */
+            --text-color: #006064;
+            /* 濃い水色（読みやすさ重視） */
             --font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
         }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
@@ -21,6 +25,7 @@
             margin: 0;
             transition: background-color 0.3s ease;
         }
+
         .container {
             text-align: center;
             padding: 2rem;
@@ -29,17 +34,28 @@
             border-radius: 20px;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
         }
+
         h1 {
-            font-size: 5rem; /* 大きな文字 */
+            font-size: 5rem;
+            /* 大きな文字 */
             margin: 0;
             font-weight: 800;
             letter-spacing: -2px;
             animation: fadeIn 1.2s ease-out;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 3rem;
@@ -47,9 +63,13 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Hello World</h1>
+        <img src="{{ url_for('static', filename='robot.png') }}" alt="Robot Scientist"
+            style="max-width: 100%; height: auto; border-radius: 15px; margin-top: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); animation: fadeIn 2s ease-out;">
     </div>
 </body>
+
 </html>
